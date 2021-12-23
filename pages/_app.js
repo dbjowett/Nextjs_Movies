@@ -2,7 +2,7 @@ import '../styles/globals.css';
 import nProgress from 'nprogress';
 import '../styles/nProgress.css';
 import Router from 'next/router';
-import Page from '../components/Page';
+import Page from '../components/layout/Page';
 
 Router.events.on('routeChangeStart', () => nProgress.start());
 Router.events.on('routeChangeComplete', () => nProgress.done());

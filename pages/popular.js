@@ -1,3 +1,5 @@
+import MovieCard from '../components/MovieCard/Movie_card';
+
 export default function PopularPage() {
-  return <div>Popular Movies</div>;
+  return <MovieCard />;
 }
