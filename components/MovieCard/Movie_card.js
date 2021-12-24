@@ -6,9 +6,9 @@ export default function MovieCard() {
   return (
     <div className={classes.container}>
       <div className={classes.image}>
-        <Image src={DuneImage} width={200} height={300} layout='responsive' />
+        <Image src={DuneImage} />
       </div>
-      <div>
+      <div className={classes.info}>
         <h1>Dune</h1>
         <div>
           A mythic and emotionally charged hero's journey, "Dune" tells the story of Paul Atreides, a brilliant and gifted young man born

@@ -7,7 +7,7 @@ export default function Navigation() {
   return (
     <div className={classes.container}>
       <Logo />
-      <ul>
+      <ul className={classes.link_list}>
         <div>
           <FaFireAlt />
           <Link href='/popular'>Popular</Link>
