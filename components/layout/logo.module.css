@@ -7,13 +7,13 @@
 
 .logo {
   position: relative;
-  margin-left: 50px;
+  margin-left: 100px;
 }
 
 .logo svg {
   position: absolute;
-  top: 15px;
-  left: 35px;
+  top: 53px;
+  left: 130px;
   color: #f25d2a;
   z-index: 0;
 }
@@ -22,9 +22,9 @@
   z-index: 10;
   font-family: league-gothic;
   font-weight: 400;
-  font-size: 72px;
+  font-size: 3.5rem;
   color: white;
-  padding: 25px 0 0 35px;
+  padding: 25px 0 0 0px;
 }
 
 .button {
@@ -33,7 +33,7 @@
   color: white;
   padding: 10px 20px;
   border-radius: 10px;
-  margin-right: 50px;
+  margin-right: 100px;
   display: flex;
   align-items: center;
   cursor: pointer;

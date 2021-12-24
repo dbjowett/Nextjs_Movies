@@ -15,6 +15,7 @@ export default function MovieCard() {
           into a great destiny beyond his understanding, who must travel to the most dangerous planet in the universe to ensure the future
           of his family and his people.
         </div>
+        <button>More..</button>
       </div>
     </div>
   );

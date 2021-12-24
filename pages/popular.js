@@ -4,7 +4,7 @@ export default function PopularPage({ data }) {
   console.log(data);
   return (
     <div>
-      <div style={{ color: 'white', padding: '50px 0px 50px 100px', fontSize: '3rem' }}>Popular</div>
+      <div style={{ color: 'white', padding: '10px 0px 40px 100px', fontSize: '3rem' }}>Popular</div>
       <MovieCard />;
     </div>
   );
@@ -17,6 +17,7 @@ export async function getStaticProps() {
   return {
     props: {
       data: data
-    }
+    },
+    revalidate: 600
   };
 }
