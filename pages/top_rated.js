@@ -1,6 +1,7 @@
-export default function TopRatedMovies({ data }) {
-  console.log(data);
-  return <div>Top Rated Movies</div>;
+import MovieGrid from '../components/MovieGrid/Movie_Grid';
+
+export default function TopRatedMovies({ movies }) {
+  return <MovieGrid title='Top Rated' movies={movies} />;
 }
 
 export async function getStaticProps() {
@@ -9,7 +10,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      data: data
+      movies: data
     },
     revalidate: 600
   };

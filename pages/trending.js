@@ -1,6 +1,11 @@
-export default function TrendingPage({ data }) {
-  console.log(data);
-  return <div>Trending Movies</div>;
+import MovieGrid from '../components/MovieGrid/Movie_Grid';
+
+export default function TrendingPage({ movies }) {
+  return (
+    <div>
+      <MovieGrid title='Trending' movies={movies} />
+    </div>
+  );
 }
 
 export async function getStaticProps() {
@@ -9,7 +14,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      data: data
+      movies: data
     },
     revalidate: 600
   };

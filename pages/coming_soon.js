@@ -1,6 +1,7 @@
-export default function ComingSoon({ data }) {
-  console.log(data);
-  return <div>Coming Soon Movies</div>;
+import MovieGrid from '../components/MovieGrid/Movie_Grid';
+
+export default function ComingSoon({ movies }) {
+  return <MovieGrid title='Coming Soon' movies={movies} />;
 }
 
 export async function getStaticProps() {
@@ -9,7 +10,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      data: data
+      movies: data
     },
     revalidate: 600
   };
