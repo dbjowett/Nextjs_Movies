@@ -1,22 +1,17 @@
 .container {
-  /* Remove margin */
-  margin-left: 100px;
-
   background-color: #3c3c3c;
-  max-width: 550px;
   color: white;
   border-radius: 15px;
-  display: flex;
+  text-align: center;
 }
 
-.image img {
+/* .image img {
   border-radius: 15px;
   height: 100%;
   overflow: hidden;
-}
+} */
 
 .container div {
-  width: 225px;
   padding: 0 10px 10px 10px;
 }
 
@@ -31,6 +26,6 @@
   border-radius: 5px;
   color: white;
   border: none;
-  margin-left: 120px;
+  margin-left: 10px;
   cursor: pointer;
 }

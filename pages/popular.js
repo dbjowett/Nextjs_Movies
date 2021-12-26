@@ -1,11 +1,13 @@
-import MovieCard from '../components/MovieCard/Movie_card';
+// import MovieCard from '../components/MovieCard/Movie_Card';
+import MovieGrid from '../components/MovieGrid/Movie_Grid';
 
-export default function PopularPage({ data }) {
-  console.log(data);
+export default function PopularPage({ movies }) {
+  console.log(movies);
   return (
     <div>
       <div style={{ color: 'white', padding: '10px 0px 40px 100px', fontSize: '3rem' }}>Popular</div>
-      <MovieCard />;
+      {/* <MovieCard />; */}
+      <MovieGrid movies={movies} />
     </div>
   );
 }
@@ -16,7 +18,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      data: data
+      movies: data
     },
     revalidate: 600
   };

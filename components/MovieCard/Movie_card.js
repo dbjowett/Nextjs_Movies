@@ -2,20 +2,17 @@ import Image from 'next/image';
 import DuneImage from '../../public/images/dune.jpg';
 import classes from './movie_card.module.css';
 
-export default function MovieCard() {
+export default function MovieCard({ movie }) {
   return (
     <div className={classes.container}>
-      <div className={classes.image}>
+      {/* <div className={classes.image}>
         <Image src={DuneImage} />
-      </div>
+      </div> */}
       <div className={classes.info}>
-        <h1>Dune</h1>
-        <div>
-          A mythic and emotionally charged hero's journey, "Dune" tells the story of Paul Atreides, a brilliant and gifted young man born
-          into a great destiny beyond his understanding, who must travel to the most dangerous planet in the universe to ensure the future
-          of his family and his people.
-        </div>
-        <button>More..</button>
+        <h1>{movie.original_title}</h1>
+        <div>{movie.overview}</div>
+        <div>{movie.vote_average}</div>
+        {/* <button>More..</button> */}
       </div>
     </div>
   );
