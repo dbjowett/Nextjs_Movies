@@ -1,11 +1,19 @@
 import Image from 'next/image';
 import classes from '../MovieDetail/movie_detail.module.css';
+import { FaStar } from 'react-icons/fa';
 
 export default function MovieDetail({ movie }) {
   console.log(movie);
   if (!movie) {
     return <div>Loading...</div>;
   }
+
+  const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    maximumFractionDigits: 0
+  });
+
   return (
     <div className={classes.container}>
       <div className={classes.image}>
@@ -20,13 +28,17 @@ export default function MovieDetail({ movie }) {
       <div className={classes.info}>
         <h1>{movie.original_title}</h1>
         <div>{movie.overview}</div>
-        <div>Runtime: {movie.runtime}</div>
+        <div>{movie.runtime} mins</div>
+        <div>
+          <FaStar /> {movie.vote_average}
+        </div>
         <ul>
           Genres
           {movie.genres.map((genre) => (
-            <li>{genre.name}</li>
+            <li key={genre.name}>{genre.name}</li>
           ))}
         </ul>
+        {movie.budget ? <div>Budget: {formatter.format(movie.budget)}</div> : <div></div>}
       </div>
     </div>
   );

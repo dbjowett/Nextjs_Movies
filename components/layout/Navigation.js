@@ -18,7 +18,7 @@ export default function Navigation() {
         </div>
         <div>
           <FaStar />
-          <Link href='/top_rated'>Top Rated</Link>
+          <Link href='/trending'>Trending</Link>
         </div>
         <div>
           <FaSearch />
