@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import classes from '../layout/navigation.module.css';
-import { FaCalendarAlt, FaFireAlt, FaStar, FaChartBar } from 'react-icons/fa';
+import { FaCalendarAlt, FaFireAlt, FaStar, FaSearch } from 'react-icons/fa';
 import Logo from './Logo';
 
 export default function Navigation() {
@@ -13,16 +13,16 @@ export default function Navigation() {
           <Link href='/popular'>Popular</Link>
         </div>
         <div>
-          <FaChartBar />
-          <Link href='/trending'>Trending</Link>
-        </div>
-        <div>
           <FaCalendarAlt />
           <Link href='/coming_soon'>Coming Soon</Link>
         </div>
         <div>
           <FaStar />
           <Link href='/top_rated'>Top Rated</Link>
+        </div>
+        <div>
+          <FaSearch />
+          <Link href='/search'>Search</Link>
         </div>
       </ul>
     </div>

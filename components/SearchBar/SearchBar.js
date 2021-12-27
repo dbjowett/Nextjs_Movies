@@ -1,0 +1,37 @@
+import { useState, useEffect } from 'react';
+import classes from '../SearchBar/searchbar.module.css';
+
+export default function SearchBar({ getQuery }) {
+  const [query, setQuery] = useState('');
+  const [debouncedQuery, setDebouncedQuery] = useState('');
+
+  const onChange = (e) => {
+    const query = e.target.value;
+    setQuery(query);
+  };
+
+  //Debounce search
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setDebouncedQuery(query);
+    }, 1000);
+    return () => clearTimeout(timeout);
+  }, [query]);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if (debouncedQuery.length === 0) {
+      return;
+    }
+    setQuery('');
+    getQuery(debouncedQuery);
+  };
+
+  return (
+    <div className={classes.form_container}>
+      <form onSubmit={onSubmit}>
+        <input className={classes.searchBar} type='text' onChange={onChange} value={query} placeholder='Search' />
+      </form>
+    </div>
+  );
+}
