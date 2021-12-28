@@ -31,3 +31,20 @@ export default function Movie() {
     </div>
   );
 }
+
+// export async function getStaticProps({ params }) {
+//   console.log(params);
+//   const movie = [];
+//   return {
+//     props: {
+//       movie: movie
+//     }
+//   };
+// }
+
+// export async function getStaticPaths() {
+//   return {
+//     paths: [{ params: { slug: '1' } }, { params: { slug: '2' } }, { params: { slug: '3' } }],
+//     fallback: false
+//   };
+// }

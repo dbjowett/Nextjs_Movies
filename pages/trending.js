@@ -1,7 +1,16 @@
 import MovieGrid from '../components/MovieGrid/Movie_Grid';
+import Head from 'next/head';
 
 export default function Trending({ movies }) {
-  return <MovieGrid title='Trending' movies={movies} />;
+  return (
+    <div>
+      <Head>
+        <title>Trending Movies</title>
+        <meta name='description' content='Movies that are trending in the last week' />
+      </Head>
+      <MovieGrid title='Trending' movies={movies} />;
+    </div>
+  );
 }
 
 export async function getStaticProps() {

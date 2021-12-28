@@ -3,24 +3,28 @@ import classes from '../MovieDetail/movie_detail.module.css';
 import { FaStar } from 'react-icons/fa';
 
 export default function MovieDetail({ movie }) {
-  console.log(movie);
+  // console.log(movie);
   if (!movie) {
     return <div>Loading...</div>;
   }
 
+  //Format Movie Budget into USD
   const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',
     maximumFractionDigits: 0
   });
 
+  //Construct IMDB link
+  const IMDB = `https://www.imdb.com/title/${movie.imdb_id}`;
+
   return (
     <div className={classes.container}>
       <div className={classes.image}>
         <Image
-          src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
-          width={320}
-          height={180}
+          src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+          width={220}
+          height={320}
           layout='responsive'
           alt={movie.original_title}
         />
@@ -30,7 +34,8 @@ export default function MovieDetail({ movie }) {
         <div>{movie.overview}</div>
         <div>{movie.runtime} mins</div>
         <div>
-          <FaStar /> {movie.vote_average}
+          <FaStar />
+          {movie.vote_average}
         </div>
         <ul>
           Genres
@@ -39,6 +44,18 @@ export default function MovieDetail({ movie }) {
           ))}
         </ul>
         {movie.budget ? <div>Budget: {formatter.format(movie.budget)}</div> : <div></div>}
+        <div>
+          <button>
+            <a href={movie.homepage} target='_blank' rel='noopener noreferrer'>
+              Website
+            </a>
+          </button>
+          <button>
+            <a href={IMDB} target='_blank' rel='noopener noreferrer'>
+              IMDB
+            </a>
+          </button>
+        </div>
       </div>
     </div>
   );

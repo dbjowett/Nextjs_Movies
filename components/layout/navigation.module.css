@@ -25,6 +25,10 @@
   font-weight: 500;
 }
 
+.link_list div a {
+  border-bottom: 1px solid #f25c2a00;
+}
+
 .link_list div:not(:first-of-type) {
   margin-left: 50px;
 }
@@ -35,7 +39,6 @@
 }
 
 .link_list div a:hover {
-  background-color: #f25d2a;
+  border-bottom: 1px solid #f25d2a;
   color: white;
-  border-radius: 10px;
 }

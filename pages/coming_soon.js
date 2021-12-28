@@ -1,7 +1,16 @@
 import MovieGrid from '../components/MovieGrid/Movie_Grid';
+import Head from 'next/head';
 
 export default function ComingSoon({ movies }) {
-  return <MovieGrid title='Coming Soon' movies={movies} />;
+  return (
+    <div>
+      <Head>
+        <title>Upcoming Movies</title>
+        <meta name='description' content='Movies that are being released soon.' />
+      </Head>
+      <MovieGrid title='Coming Soon' movies={movies} />
+    </div>
+  );
 }
 
 export async function getStaticProps() {
