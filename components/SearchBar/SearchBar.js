@@ -10,13 +10,18 @@ export default function SearchBar({ getQuery }) {
     setQuery(query);
   };
 
-  //Debounce search
+  //Debounce search query
   useEffect(() => {
     const timeout = setTimeout(() => {
       setDebouncedQuery(query);
     }, 1000);
     return () => clearTimeout(timeout);
   }, [query]);
+
+  // Call API when query has been debounced
+  useEffect(() => {
+    getQuery(debouncedQuery);
+  }, [debouncedQuery]);
 
   const onSubmit = (e) => {
     e.preventDefault();

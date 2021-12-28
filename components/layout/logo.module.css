@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* height: 200px; */
 }
 
 .logo {
@@ -25,6 +24,7 @@
   font-size: 3.5rem;
   color: white;
   padding: 25px 0 0 0px;
+  cursor: pointer;
 }
 
 .button {
