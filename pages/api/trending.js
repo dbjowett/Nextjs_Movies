@@ -1,9 +1,6 @@
-export default async function handler(req, res) {
-  const URL = `https://api.themoviedb.org/3/trending/movie/day?api_key=${process.env.MOVIEDB_KEY}`;
+import imdb from '../../utils/tmdb';
 
-  const response = await fetch(URL);
-  const { results } = await response.json();
-  const jsonResults = JSON.stringify(results);
-
-  res.status(200).json(jsonResults, { message: 'Success' });
-}
+export default async (req, res) => {
+  const { data: { results } = {} } = await imdb(`trending/movie/day`);
+  res.status(200).send(JSON.stringify(results));
+};

@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import classes from '../SearchBar/searchbar.module.css';
-import { FaSearch } from 'react-icons/fa';
 
 export default function SearchBar({ getQuery }) {
   const [query, setQuery] = useState('');
