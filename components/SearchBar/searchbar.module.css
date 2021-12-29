@@ -9,8 +9,9 @@
   border: none;
   padding: 10px;
   border-radius: 15px;
-  width: 20vw;
-  max-width: 250px;
+  width: 50vw;
+  height: 45px;
+  max-width: 300px;
 }
 
 .button {

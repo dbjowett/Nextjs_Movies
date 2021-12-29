@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import classes from '../SearchBar/searchbar.module.css';
+import { FaSearch } from 'react-icons/fa';
 
 export default function SearchBar({ getQuery }) {
   const [query, setQuery] = useState('');
@@ -35,7 +36,7 @@ export default function SearchBar({ getQuery }) {
   return (
     <div className={classes.form_container}>
       <form onSubmit={onSubmit}>
-        <input className={classes.searchBar} type='text' onChange={onChange} value={query} placeholder='Search' />
+        <input className={classes.searchBar} type='text' onChange={onChange} value={query} placeholder='Search for movies'></input>
       </form>
     </div>
   );
