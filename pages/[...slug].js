@@ -11,7 +11,7 @@ export default function Movie() {
 
   const fetcher = (url) => fetch(url).then((r) => r.json());
 
-  const URL = `http://localhost:3000/api/search/?query=${_id}`;
+  const URL = `/api/search/id_search/?query=${_id}`;
   const { data, error } = useSWR(URL, fetcher);
 
   if (!data) {

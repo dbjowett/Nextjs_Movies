@@ -11,7 +11,7 @@ export default function Search() {
     if (query.length === 0) {
       return;
     }
-    const URL = `http://localhost:3000/api/search/?query=${query}&source=search`;
+    const URL = `http://localhost:3000/api/search/query_search/?query=${query}`;
     const res = await fetch(URL);
     const results = await res.json();
     setMovies(results);
