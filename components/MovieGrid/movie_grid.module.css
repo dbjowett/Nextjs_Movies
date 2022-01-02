@@ -13,3 +13,9 @@
   gap: 2rem;
   margin: 0 100px;
 }
+/* 
+.grid li:first-of-type {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: row;
+} */
