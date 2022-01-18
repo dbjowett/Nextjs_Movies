@@ -12,10 +12,12 @@ export default function Logo() {
         </div>
       </Link>
       <div>
-        {/* <button className={classes.button}>
-          Login
-          <FaSignInAlt size={15} />
-        </button> */}
+        <Link href='/auth'>
+          <button className={classes.button}>
+            Login
+            <FaSignInAlt size={15} />
+          </button>
+        </Link>
       </div>
     </div>
   );
