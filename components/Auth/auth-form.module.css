@@ -23,8 +23,6 @@
 .form {
   padding: 25px;
   align-items: center;
-  /* display: flex; */
-  /* flex-direction: column; */
 }
 
 .inputContainer {
@@ -55,6 +53,7 @@
 .loginButton {
   width: 90%;
   background-color: #fd4747;
+  /* background-color: #5f7386; */
   border: none;
   color: white;
   font-size: 1.3rem;
@@ -84,8 +83,8 @@
 
 .optionsBtnContainer button:last-of-type div {
   margin-left: 5px;
-  color: rgb(120, 120, 120);
-  background-color: #c0d1e1;
+  color: white;
   padding: 5px;
+  background-color: #fd4747;
   border-radius: 15px;
 }

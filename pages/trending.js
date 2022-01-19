@@ -1,5 +1,6 @@
 import MovieGrid from '../components/MovieGrid/Movie_Grid';
 import Head from 'next/head';
+import { server } from '../config';
 
 export default function Trending({ movies }) {
   return (
@@ -14,7 +15,7 @@ export default function Trending({ movies }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('http://localhost:3000/api/trending');
+  const res = await fetch(`${server}/api/trending`);
   const data = await res.json();
 
   return {

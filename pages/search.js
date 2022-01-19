@@ -1,6 +1,7 @@
 import MovieGrid from '../components/MovieGrid/Movie_Grid';
 import SearchBar from '../components/SearchBar/SearchBar';
 import Head from 'next/head';
+import { server } from '../config';
 
 import { useState } from 'react';
 
@@ -11,7 +12,7 @@ export default function Search() {
     if (query.length === 0) {
       return;
     }
-    const URL = `http://localhost:3000/api/search/query_search/?query=${query}`;
+    const URL = `${server}/api/search/query_search/?query=${query}`;
     const res = await fetch(URL);
     const results = await res.json();
     setMovies(results);

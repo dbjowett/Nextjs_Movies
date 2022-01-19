@@ -1,3 +1,15 @@
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+
 export default function Home() {
-  return <div>Hello</div>;
+  const router = useRouter();
+  const path = router.pathname;
+
+  useEffect(() => {
+    if (path === '/') {
+      router.push('/popular', { shallow: true });
+    }
+  }, []);
+
+  return <div></div>;
 }
