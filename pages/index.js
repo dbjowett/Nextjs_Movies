@@ -9,7 +9,7 @@ export default function Home() {
     if (path === '/') {
       router.push('/popular', { shallow: true });
     }
-  }, []);
+  });
 
   return <div></div>;
 }

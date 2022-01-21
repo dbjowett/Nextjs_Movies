@@ -1,6 +1,6 @@
 import MovieGrid from '../components/MovieGrid/Movie_Grid';
 import Head from 'next/head';
-import { server } from '../config';
+import imdb from '../utils/tmdb';
 
 export default function PopularPage({ movies }) {
   return (
@@ -15,12 +15,10 @@ export default function PopularPage({ movies }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${server}/api/popular`);
-  const data = await res.json();
-
+  const { data: { results } = {} } = await imdb(`discover/movie`);
   return {
     props: {
-      movies: data
+      movies: results
     },
     revalidate: 600
   };

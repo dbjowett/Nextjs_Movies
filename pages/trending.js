@@ -1,6 +1,6 @@
 import MovieGrid from '../components/MovieGrid/Movie_Grid';
 import Head from 'next/head';
-import { server } from '../config';
+import imdb from '../utils/tmdb';
 
 export default function Trending({ movies }) {
   return (
@@ -15,12 +15,11 @@ export default function Trending({ movies }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${server}/api/trending`);
-  const data = await res.json();
+  const { data: { results } = {} } = await imdb(`trending/movie/day`);
 
   return {
     props: {
-      movies: data
+      movies: results
     },
     revalidate: 600
   };

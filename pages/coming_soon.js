@@ -1,6 +1,6 @@
 import MovieGrid from '../components/MovieGrid/Movie_Grid';
 import Head from 'next/head';
-import { server } from '../config';
+import imdb from '../utils/tmdb';
 
 export default function ComingSoon({ movies }) {
   return (
@@ -15,12 +15,17 @@ export default function ComingSoon({ movies }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${server}/api/coming_soon`);
-  const data = await res.json();
+  const date = new Date();
+  const todayDate = new Date().toJSON().slice(0, 10);
+  const nextweek = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 7).toJSON().slice(0, 10);
+
+  const URL = `discover/movie?primary_release_date.gte=${todayDate}&primary_release_date.lte=${nextweek}&region=US`;
+
+  const { data: { results } = {} } = await imdb(URL);
 
   return {
     props: {
-      movies: data
+      movies: results
     },
     revalidate: 600
   };

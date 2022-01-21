@@ -25,26 +25,9 @@ export default function Movie() {
   return (
     <div style={{ display: 'flex', justifyContent: 'center' }}>
       <Head>
-        <title>{data.original_title}</title>
+        <title>{data?.original_title}</title>
       </Head>
-      <MovieDetail movie={data} />
+      {data ? <MovieDetail movie={data} /> : <></>}
     </div>
   );
 }
-
-// export async function getStaticProps({ params }) {
-//   console.log(params);
-//   const movie = [];
-//   return {
-//     props: {
-//       movie: movie
-//     }
-//   };
-// }
-
-// export async function getStaticPaths() {
-//   return {
-//     paths: [{ params: { slug: '1' } }, { params: { slug: '2' } }, { params: { slug: '3' } }],
-//     fallback: false
-//   };
-// }
