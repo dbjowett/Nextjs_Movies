@@ -1,4 +1,4 @@
-## See [live](https://nextjs-movies-theta.vercel.app/)
+## See [Live](https://nextjs-movies-theta.vercel.app/) ⚡⚡
 
 ## Features
 - Next.js [Static Generation](https://nextjs.org/docs/basic-features/pages#static-generation-recommended)
