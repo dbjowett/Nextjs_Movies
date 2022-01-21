@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container a {
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.link_list {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.link_list div {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  font-weight: 500;
+}
+
+.link_list div a {
+  border-bottom: 1px solid #f25c2a00;
+}
+
+.link_list div:not(:first-of-type) {
+  margin-left: 50px;
+}
+
+.link_list div svg {
+  color: #f25d2a;
+  margin-right: 3px;
+}
+
+.link_list div a:hover {
+  border-bottom: 1px solid #f25d2a;
+  color: white;
+}
