@@ -6,8 +6,12 @@ import MovieDetail from '../components/MovieDetail/Movie_Detail';
 
 export default function Movie() {
   const router = useRouter();
-  const { slug } = router.query;
-  const _id = slug[2];
+
+  let _id;
+  if (router.query.hasOwnProperty('slug')) {
+    const { slug } = router.query;
+    _id = slug[2];
+  }
 
   const fetcher = (url) => fetch(url).then((r) => r.json());
 
