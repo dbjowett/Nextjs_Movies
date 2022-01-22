@@ -1,6 +1,7 @@
 import classes from '../Auth/auth-form.module.css';
 import { useState, useRef } from 'react';
 import { FaSignInAlt, FaGoogle } from 'react-icons/fa';
+import { signIn } from 'next-auth/react';
 
 async function createUser(email, password) {
   const config = {
@@ -41,6 +42,9 @@ export default function AuthForm() {
 
     if (isLogin) {
       // Log user in
+      const result = await signIn('credentials', {
+        redirect: false
+      });
     } else {
       try {
         const result = await createUser(currentEmail, currentPassword);
