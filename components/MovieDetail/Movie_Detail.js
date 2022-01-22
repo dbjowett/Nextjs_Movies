@@ -33,18 +33,20 @@ export default function MovieDetail({ movie }) {
         <h1>{movie.original_title}</h1>
         <div>{movie.overview}</div>
         <div>{movie.runtime} mins</div>
-        <div>
-          <FaStar />
+        <div className={classes.ratingContainer}>
+          <div>
+            <FaStar />
+          </div>
           {movie.vote_average}
         </div>
-        <ul>
-          Genres
+        <ul className={classes.genreContainer}>
+          <h2>Genres</h2>
           {movie.genres.map((genre) => (
             <li key={genre.name}>{genre.name}</li>
           ))}
         </ul>
         {movie.budget ? <div>Budget: {formatter.format(movie.budget)}</div> : <div></div>}
-        <div>
+        <div className={classes.btnContainer}>
           <button>
             <a href={movie.homepage} target='_blank' rel='noopener noreferrer'>
               Website
