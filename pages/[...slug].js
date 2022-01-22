@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import Head from 'next/head';
+import { TailSpin } from 'react-loader-spinner';
 
 import MovieDetail from '../components/MovieDetail/Movie_Detail';
 
@@ -19,7 +20,11 @@ export default function Movie() {
   const { data, error } = useSWR(URL, fetcher);
 
   if (!data) {
-    return <div>Loading...</div>;
+    return (
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '150px' }}>
+        <TailSpin color='#f25d2a' height={80} width={80} />
+      </div>
+    );
   }
 
   if (error) {
