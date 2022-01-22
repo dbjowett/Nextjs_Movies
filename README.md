@@ -1,15 +1,4 @@
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Then, Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
+## See [Live](https://nextjs-movies-theta.vercel.app/) ⚡⚡
 
 ## Features
 - Next.js [Static Generation](https://nextjs.org/docs/basic-features/pages#static-generation-recommended)
