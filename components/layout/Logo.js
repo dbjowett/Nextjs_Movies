@@ -11,14 +11,6 @@ export default function Logo() {
           <h1>MOVIES</h1>
         </div>
       </Link>
-      <div>
-        <Link href='/auth'>
-          <button className={classes.button}>
-            Login
-            <FaSignInAlt size={15} />
-          </button>
-        </Link>
-      </div>
     </div>
   );
 }

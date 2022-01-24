@@ -1,0 +1,73 @@
+.hamburger {
+  display: none;
+  position: fixed;
+  padding: 10px;
+}
+
+.sidebar {
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  color: white;
+  background-color: rgb(35, 35, 35);
+  width: 250px;
+  z-index: 1;
+}
+
+.sidebarContainer {
+  padding-top: 100px;
+}
+
+.sidebarLink {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 40px 0 10px 44px;
+}
+.sidebarLink a:hover {
+  border-bottom: 1px solid #f25d2a;
+}
+.sidebar svg {
+  color: #f25d2a;
+  margin-right: 15px;
+}
+
+.btnContainer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 50px;
+}
+
+.button {
+  background-color: #f25d2a;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 40px;
+}
+
+.button svg {
+  color: white;
+  margin-left: 15px;
+}
+
+@media (max-width: 1000px) {
+  .sidebar {
+    transform: translateX(-100%);
+    animation: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .hamburger {
+    display: block;
+    color: #f25d2a;
+    margin: 50px 0 0 20px;
+    cursor: pointer;
+    background-color: inherit;
+    border: none;
+  }
+}

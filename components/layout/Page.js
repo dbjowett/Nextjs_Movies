@@ -1,13 +1,13 @@
-import Navigation from './Navigation';
-
-// To push the content from under the sidebar
-import classes from './navigation.module.css';
+import Sidebar from '../Sidebar/Sidebar';
+import classes from './page.module.css';
+// import Navigation from './Navigation';
 
 export default function Page({ children }) {
   return (
-    <div style={{ paddingBottom: '50px' }}>
-      <Navigation />
-      <div className={classes.main}>{children}</div>
+    <div>
+      {/* <Navigation /> */}
+      <Sidebar />
+      <div className={classes.mainContainer}>{children}</div>
     </div>
   );
 }

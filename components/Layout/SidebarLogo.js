@@ -1,8 +1,8 @@
 import { FaTicketAlt, FaSignInAlt } from 'react-icons/fa';
-import classes from './logo.module.css';
+import classes from './sidebarlogo.module.css';
 import Link from 'next/link';
 
-export default function Logo() {
+export default function SidebarLogo() {
   return (
     <div className={classes.logo_nav_container}>
       <Link href='/popular' passHref>
@@ -11,14 +11,6 @@ export default function Logo() {
           <h1>MOVIES</h1>
         </div>
       </Link>
-      <div>
-        <Link href='/auth'>
-          <button className={classes.button}>
-            Login
-            <FaSignInAlt size={15} />
-          </button>
-        </Link>
-      </div>
     </div>
   );
 }
