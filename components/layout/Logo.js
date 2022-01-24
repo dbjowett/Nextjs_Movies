@@ -1,4 +1,4 @@
-import { FaTicketAlt, FaSignInAlt } from 'react-icons/fa';
+import { FaTicketAlt } from 'react-icons/fa';
 import classes from './logo.module.css';
 import Link from 'next/link';
 
