@@ -1,5 +1,5 @@
 import Sidebar from '../Sidebar/Sidebar';
-import classes from './page.module.css';
+import classes from '../Layout/page.module.css';
 
 export default function Page({ children }) {
   return (
