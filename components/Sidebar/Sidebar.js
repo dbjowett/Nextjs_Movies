@@ -2,7 +2,6 @@ import Link from 'next/dist/client/link';
 import { useState } from 'react';
 import { FaFireAlt, FaCalendarAlt, FaStar, FaSearch, FaSignInAlt, FaBars } from 'react-icons/fa';
 import SidebarLogo from '../Layout/SidebarLogo';
-import SearchBar from '../SearchBar/SearchBar';
 import classes from './sidebar.module.css';
 
 export default function Sidebar() {
@@ -18,7 +17,7 @@ export default function Sidebar() {
       <button className={classes.hamburger} onClick={clickHandler}>
         <FaBars size={35} />
       </button>
-      <nav className={classes.sidebar}>
+      <nav className={`${classes.sidebar} ${!isOpen ? classes.open : ''}`}>
         <SidebarLogo />
         <div className={classes.sidebarContainer}>
           <div className={classes.sidebarLink}>
