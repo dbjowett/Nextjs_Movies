@@ -14,8 +14,8 @@
   margin: 0 80px;
 }
 
-@media (max-width: 450px) {
+/* @media (max-width: 450px) {
   .grid {
-    /* margin-left: 70px; */
+    margin-left: 70px;
   }
-}
+} */

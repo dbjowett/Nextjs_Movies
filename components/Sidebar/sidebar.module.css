@@ -1,7 +1,7 @@
 .hamburger {
   display: none;
   position: absolute;
-  background-color: #001220;
+  background-color: inherit;
   border-radius: 50%;
   padding: 10px;
   margin: 30px 0 0 15px;
@@ -59,7 +59,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  margin-left: 40px;
+  margin-left: 60px;
 }
 
 .button svg {
@@ -77,6 +77,5 @@
   .hamburger {
     display: block;
     z-index: 100;
-    background-color: #001220;
   }
 }
